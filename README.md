@@ -8,43 +8,44 @@ Timmy Nielsen and Joakim Lilja.
 
 ## Engine Design
 
-While waiting on the particle system part of the project to begin. We
-have spent quite alot of time on designing and building the (non
-manditory) engine. The structure of the engine is pretty much
-finished. There is some parts which need some minor cleanup and some
-features such as camera system left to implement. Our main goal with
-the engine was to make extending it easy, which I think I have
-accomplished, so adding the lacking features should be quite easy.
+Before starting on the actual particle system implementation, we
+have spent quite a lot of time on designing and building the (non
+manditory) engine. The structure of the engine is now pretty much
+finished, although there are some parts which need minor cleanup as
+well as some features left to implement, such as a camera system etc.
+Our main goal when creating the engine was to make it easy to extend,
+which we believe we have accomplished, meaning that adding the rest
+of the features should prove to be quite easy.
 
 The engine is designed around the idea of entity component systems.
-This gives us many advantages over a more object oriented
+This gives us many advantages compared to a more object oriented
 approach. The pattern is used by many modern game engines, one notable
-example is Unity. Part if the group has written a few 3D-engines in
-the past, after a while you realize that splitting functionality from
-the data is a good design decision for multiple reasons. One major
-reason is that there might be multiple systems of the engine which are
-dependant on the same data. Using the pattern also makes it easier to
-extend the engine with more functionality when the project grows.
+example being Unity. Having some prior experience in 3D-engine programming,
+Gustav brought forth the idea of splitting functionality from data as
+a good design decision for multiple reasons. The most significant reason
+is the fact that there might be multiple systems of the engine which depend
+on the same data. Another reason is that it becomes easier to
+extend the engine with more functionality as the project grows.
 
-The complexity of the codebase is one reason you might adopt the
+The complexity of the codebase is one reason you might adopt this
 pattern, another advantage is that we can keep related data close
-together, this can make a huge impact on performance due to cache
-locality. Designing the program to be nice on the cache is usally
-called Data Oriented Design (DOD). We don't really need such complex
-engine for the project we plan on doing, but it is nice to have one if
-we want to add some bling-bling to the demo. Creating a basic entity
-component system isn't much more diffucult than a more traditional
+together. This can make a huge impact on performance due to cache
+locality. Designing the program to be easy on the cache is known
+as Data Oriented Design (DOD). We don't really need such a complex
+engine for the project we're planning, but it is nice to have one in
+case we want to add some bling-bling to the demo. Creating a basic
+entity component system isn't much more diffucult than a more traditional
 object oriented approach. For a small project it probably adds some
-complexity, but when the project grows we are certain the complexity
-will be reduced using such sytem.
+complexity, but as the project grows we are convinced the complexity
+will be reduced.
 
-We wont give more than a very brief overview on the engine
-design. There are a lot of texts on the interwebs which describes the
-pattern in more depth. If you want more information about the
-implemation details, you can find the code in the github
+We will only provide a brief overview of the engine design.
+There are a lot of in-depth information on the pattern available on
+the interwebs for the interested reader. If you want more details
+about our specific implemation, the code is available in our github
 repository. The engine design isn't the most relevant part of the
-project and to be fair not even necessary. On the otherhand, now when
-we have this blog we might explain the whole process.
+project as it is not mandatory. On the otherhand, considering we
+have a blog to write, we might as well explain the whole process.
 
 ## Setup and initial project specification
 
