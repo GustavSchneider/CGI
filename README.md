@@ -7,6 +7,47 @@ main goals of the course. This blog will follow our progress in that
 project. The members of the project group are Gustav Nelson Schneider,
 Timmy Nielsen and Joakim Lilja.
 
+(stage 4) More Features
+=======================
+
+Since the previous stage we have managed to implement some extra
+features such as user control of the particle system gravity, gamma
+correction and exposure. We also give the user information about the
+position where the particle system currently emits particles.
+
+Because of our preparations in structuring the code well from the
+beginning, the features are pretty trivial to implement. What has
+taken more time is optimizing the features and making the effects look
+as good and smooth as possible.
+
+### Structuring
+
+We also spent some time re-structuring parts of the code for better
+functionality and readability. We moved some of the code in our
+previous main-method into appropriate class representations instead,
+meaning the actual particle system is now a class in its own etc.
+
+### Bloom
+
+With gaussian blur implemented we could now implement a bloom
+effect. We found a chapter in Nvidias GPU gems linked below which
+describes the effect and how works. We chose to implement the effect
+which was quite easy with our already finished gaussian blur. See the
+image below for the bloom effect. Below you can see a render with a
+little over one million particles, running on one of the team-members
+laptops.
+
+![particles03](https://imgur.com/rn8Jahy)
+
+[Link to GPU gems article](http://developer.download.nvidia.com/books/HTML/gpugems/gpugems_ch21.html)
+
+### Next stage
+
+Now we will basically just focus on fine-tuning the code, making sure
+the system works smoothly on the Linux and Windows platform, and
+finishing the project report.
+
+
 (stage 3) Gaussian Blur
 =======================
 	
@@ -90,8 +131,7 @@ better see how the noise affect the system.
 
 ![Particle01](particle-1.png)
 
-Link to the curl-noise paper:
-![https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf]
+[Link to the curl-noise paper](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf)
 
 ### Next stage
 For the next stage of our project we plan to start introducing more user interactive features. At this moment we expect to at least implement a blur effect controlled by the user, but we are still discussing and researching other kinds of user interactive features we might want to include.
