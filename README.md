@@ -6,46 +6,27 @@ main goals of the course. This blog will follow our progress in that
 project. The members of the project group are Gustav Nelson Schneider,
 Timmy Nielsen and Joakim Lilja.
 
-## Engine Design
+## Transform Feedback
+We followed our initial idea that we mentioned in the previous blog
+post about starting off with transform feedback. Transform feedback
+lets us update the data in GPU memory directly on the GPU instead of
+sending it back and forth between CPU and the GPU. Transform Feedback
+makes this possible by letting us output data to a OpenGL buffer in
+the vertex shader or the geometry shader stage. Sending memory from
+the CPU to the GPU is really slow, sending millions of particles to
+the GPU every frame would overflow our memory bus, keeping the data on
+the GPU is therefore really important enable us to render a lot of
+particles.
 
-Before starting on the actual particle system implementation, we
-have spent quite a lot of time on designing and building the (non
-manditory) engine. The structure of the engine is now pretty much
-finished, although there are some parts which need minor cleanup as
-well as some features left to implement, such as a camera system etc.
-Our main goal when creating the engine was to make it easy to extend,
-which we believe we have accomplished, meaning that adding the rest
-of the features should prove to be quite easy.
+The Transform feedback functionality was not that hard to implement as
+it sort of is a part of the rasterization pipeline. Although it
+required quite a few steps to setup. We managed to implement the
+transform feedback quite fast (a quite a few hours) without any major
+struggles. Note that transform feedback only works if you have created
+a buffer on the GPU memory and actually sent the data to that buffer
+to let the transform feedback update the data.
 
-The engine is designed around the idea of entity component systems.
-This gives us many advantages compared to a more object oriented
-approach. The pattern is used by many modern game engines, one notable
-example being Unity. Having some prior experience in 3D-engine programming,
-Gustav brought forth the idea of splitting functionality from data as
-a good design decision for multiple reasons. The most significant reason
-is the fact that there might be multiple systems of the engine which depend
-on the same data. Another reason is that it becomes easier to
-extend the engine with more functionality as the project grows.
-
-The complexity of the codebase is one reason you might adopt this
-pattern, another advantage is that we can keep related data close
-together. This can make a huge impact on performance due to cache
-locality. Designing the program to be easy on the cache is known
-as Data Oriented Design (DOD). We don't really need such a complex
-engine for the project we're planning, but it is nice to have one in
-case we want to add some bling-bling to the demo. Creating a basic
-entity component system isn't much more diffucult than a more traditional
-object oriented approach. For a small project it probably adds some
-complexity, but as the project grows we are convinced the complexity
-will be reduced.
-
-We provide a brief overview of the engine design below.
-There are a lot of in-depth information on the pattern available on
-the interwebs for the interested reader. If you want more details
-about our specific implemation, the code is available in our github
-repository. The engine design isn't the most relevant part of the
-project as it is not mandatory. On the otherhand, considering we
-have a blog to write, we might as well explain the whole process.
+![Transform Feedback](https://i.stack.imgur.com/aUXj6.png)
 
 ## Setup and initial project specification
 
