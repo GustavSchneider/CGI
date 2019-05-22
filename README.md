@@ -1,4 +1,5 @@
-## About
+About
+=====
 
 We are currently taking the course Computer Graphics and Interaction
 at KTH.  Creating a computer graphics related project is one of the
@@ -6,7 +7,8 @@ main goals of the course. This blog will follow our progress in that
 project. The members of the project group are Gustav Nelson Schneider,
 Timmy Nielsen and Joakim Lilja.
 
-## Transform Feedback
+Transform Feedback
+==================
 We followed our initial idea that we mentioned in the previous blog
 post about starting off with transform feedback. Transform feedback
 lets us update the data in GPU memory directly on the GPU instead of
@@ -28,7 +30,8 @@ to let the transform feedback update the data.
 
 ![Transform Feedback](https://i.stack.imgur.com/aUXj6.png)
 
-## Setup and initial project specification
+Setup and initial project specification
+=======================================
 
 We decided early on that we wanted to do a project related to 
 rendering. After some discussion, we managed to narrow it down to either
