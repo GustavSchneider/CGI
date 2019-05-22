@@ -7,8 +7,49 @@ main goals of the course. This blog will follow our progress in that
 project. The members of the project group are Gustav Nelson Schneider,
 Timmy Nielsen and Joakim Lilja.
 
-Transform Feedback
-==================
+(stage 2) Compute Shaders
+========================
+
+In the previous blog post we mentioned that we implemented the
+transform feedback functionality to increase performance and not
+having the data to be sent from the CPU all the time. We successfully
+implemented this but noticed that it was more tedious to work with
+than seemed necessary. We did some research on the topic and found
+that you can implement the same functionality without using the
+rasterization pipeline by incorporating compute shaders in our system.
+
+Compute shaders looked promising and we successfully implemented it in
+our project. It was no real issue to change from transform feedback to
+compute shaders and after the implementation changes was in place the
+small particle system we had built was functioning equally as good, if
+not better, as the previous solution. Compute shaders does the same
+job as transform feedback by updating the data (the particles, in our
+case) and saving it back to the GPU memory buffer.
+
+###Curl noise
+
+Next up we have further developed our noise and decided to implemented
+curl noise. We found a paper that describes how to implement curl
+noise, which is based of Perlin noise. The technique is based on
+calculating the curl of a 3d-dimensional noise vector field. We
+created the vector field by using a single 3d noise function, which we
+offset by a large value for each axis.
+
+The noise as described in the paper would give some nice animated
+turbulent fluid movement which it indeed did. Below you can find a
+link to the paper and also an image of our current state of the
+particle system together with the noise implementation. To see
+everything in action we made the particles follow a sine curve, to
+better see how the noise affect the system.
+
+![Particle01](particle-1.png)
+
+Link to the curl-noise paper:
+![https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf]
+
+
+(stage 1) Transform Feedback
+===========================
 We followed our initial idea that we mentioned in the previous blog
 post about starting off with transform feedback. Transform feedback
 lets us update the data in GPU memory directly on the GPU instead of
@@ -30,7 +71,25 @@ to let the transform feedback update the data.
 
 ![Transform Feedback](https://i.stack.imgur.com/aUXj6.png)
 
-Setup and initial project specification
+### The particle system
+
+We also decided to start spawning some particles to actually start
+with the project and test our transform feedback solution. We created
+a shader program to receive the data, manipulate it and set a color
+for it. It worked fine and the transform feedback implementation
+seemed to work as well. We could easily run the program with 1000000
+particles.
+
+### Next stage
+
+Next up in the project that we have discussed is to implemented some
+noise function to add to our particle shader program and to the
+particle system as a whole and as a feature for the project. We have
+not decided yet what noise function to use and implement but we will
+do some research about different alternatives.
+
+
+(stage 0) Setup and initial project specification
 =======================================
 
 We decided early on that we wanted to do a project related to 
@@ -42,7 +101,7 @@ leaning towards creating a GPU particle system.
 ### Setup
 
 Since our group consists of both Windows and Linux users, we first wanted
-to create a project which is possible to build in both environments.
+to create a projecnt which is possible to build in both environments.
 Gustav is the only member of the group who prefer working in Linux,
 and as he has the most experience with build systems he gladly
 took on creating a skeleton project which we could use as a starting point.
