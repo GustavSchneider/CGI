@@ -37,7 +37,7 @@ image below for the bloom effect. Below you can see a render with a
 little over one million particles, running on one of the team-members
 laptops.
 
-![particles03](https://imgur.com/rn8Jahy)
+![particles03](https://i.imgur.com/rn8Jahy.jpg)
 
 [Link to GPU gems article](http://developer.download.nvidia.com/books/HTML/gpugems/gpugems_ch21.html)
 
@@ -64,7 +64,7 @@ render. The 2-dimensional gaussian blur is a separable function, a
 huge optimization is therefore to do the gaussian blur in two steps,
 one horizontal and one vertical.
 
-![particles02](https://imgur.com/srZcSSj)
+![particles02](https://i.imgur.com/srZcSSj.png)
 
 The implementation of gaussian blur was problematic - not because of
 the complexity of the algorithm (it actually wasn’t that hard) but
