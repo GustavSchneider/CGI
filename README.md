@@ -7,6 +7,52 @@ main goals of the course. This blog will follow our progress in that
 project. The members of the project group are Gustav Nelson Schneider,
 Timmy Nielsen and Joakim Lilja.
 
+(stage 3) Gaussian Blur
+=======================
+	
+We knew that we needed some blur filter to enable us to create a bloom
+effect later on in the project. This led us to implement a gaussian
+blur filter that is activated through the user toggling a blur
+checkbox on the canvas. We started implementing a box blur since that
+algorithm was trivial and we wanted to test a blur effect out. After a
+while of researching different blur effects we ended up using gaussian
+blur because we felt it looked best out of the options we
+examined. The filter was implemented using a single compute shader
+which is run two times on the texture created by the initial
+render. The 2-dimensional gaussian blur is a separable function, a
+huge optimization is therefore to do the gaussian blur in two steps,
+one horizontal and one vertical.
+
+![particles02](https://imgur.com/srZcSSj)
+
+The implementation of gaussian blur was problematic - not because of
+the complexity of the algorithm (it actually wasn’t that hard) but
+because of some basic bugs occurring throughout the implementation
+that was hard to find but easy to fix. The most frustrating bug took
+us a couple of hours to fix, and it wasn’t until after eating lunch
+and looking at the code with a full stomach that we realised we had
+mistakenly put the z-coordinate to 0 instead of its correct value 1.
+
+### Time control
+
+Just as we implemented the blur parameter checkbox to switch blur
+on/off, we have created a similar parameter to pausing time in the
+particle system. Pausing works great for now, but the back-end time
+count is not stopped during the pause, meaning that unpausing makes
+the particle system jump ahead to a frame based on the time spent
+paused. We will make sure this is rectified in the next stage update.
+
+### Next stage
+
+The project is nearing completion, and what’s left is mostly refining
+and cleaning up the code. We are, however, still discussing what
+possible features and improvements we can introduce before the project
+deadline. We might be able to implement a slow/fast-motion alternative
+for the particle system etc. although we will have to keep a close eye
+on the project deadline and not get over our heads with ambition.
+
+
+
 (stage 2) Compute Shaders
 ========================
 
@@ -46,6 +92,9 @@ better see how the noise affect the system.
 
 Link to the curl-noise paper:
 ![https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf]
+
+### Next stage
+For the next stage of our project we plan to start introducing more user interactive features. At this moment we expect to at least implement a blur effect controlled by the user, but we are still discussing and researching other kinds of user interactive features we might want to include.
 
 
 (stage 1) Transform Feedback
