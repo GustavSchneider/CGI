@@ -20,14 +20,14 @@ beginning, the features are pretty trivial to implement. What has
 taken more time is optimizing the features and making the effects look
 as good and smooth as possible.
 
-### Structuring
+**Structuring**
 
 We also spent some time re-structuring parts of the code for better
 functionality and readability. We moved some of the code in our
 previous main-method into appropriate class representations instead,
 meaning the actual particle system is now a class in its own, etc.
 
-### Bloom
+**Bloom**
 
 With Gaussian blur implemented we could now implement a bloom
 effect. We found a chapter in Nvidia's GPU gems linked below which
@@ -41,7 +41,7 @@ laptops.
 
 [Link to GPU gems article](http://developer.download.nvidia.com/books/HTML/gpugems/gpugems_ch21.html)
 
-### Next stage
+**Next stage**
 
 Now we will basically just focus on fine-tuning the code, making sure
 the system works smoothly on the Linux and Windows platform, and
@@ -74,7 +74,7 @@ us a couple of hours to fix, and it wasn’t until after eating lunch
 and looking at the code with a full stomach that we realized we had
 mistakenly put the z-coordinate to 0 instead of its correct value 1.
 
-### Time control
+**Time control**
 
 Just as we implemented the blur parameter checkbox to switch blur
 on/off, we have created a similar parameter to pausing time in the
@@ -83,7 +83,7 @@ count is not stopped during the pause, meaning that unpausing makes
 the particle system jump ahead to a frame based on the time spent
 paused. We will make sure this is rectified in the next stage update.
 
-### Next stage
+**Next stage**
 
 The project is nearing completion, and what’s left is mostly refining
 and cleaning up the code. We are, however, still discussing what
@@ -113,7 +113,7 @@ not better, as the previous solution. Compute shaders does the same
 job as transform feedback by updating the data (the particles, in our
 case) and saving it back to the GPU memory buffer.
 
-###Curl noise
+**Curl noise**
 
 Next up we have further developed our noise and decided to implemented
 curl noise. We found a paper that describes how to implement curl
@@ -133,7 +133,7 @@ better see how the noise affect the system.
 
 [Link to the curl-noise paper](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf)
 
-### Next stage
+**Next stage**
 For the next stage of our project, we plan to start introducing more user interactive features. At this moment we expect to at least implement a blur effect controlled by the user, but we are still discussing and researching other kinds of user interactive features we might want to include.
 
 
@@ -160,7 +160,7 @@ to let the transform feedback update the data.
 
 ![Transform Feedback](https://i.stack.imgur.com/aUXj6.png)
 
-### The particle system
+**The particle system**
 
 We also decided to start spawning some particles to actually start
 with the project and test our transform feedback solution. We created
@@ -169,7 +169,7 @@ for it. It worked fine and the transform feedback implementation
 seemed to work as well. We could easily run the program with 1000000
 particles.
 
-### Next stage
+**Next stage**
 
 Next up in the project that we have discussed is to implement some
 noise function to add to our particle shader program and to the
@@ -186,7 +186,7 @@ realistic water rendering or similar GPU particle systems. We have not yet
 started working on the project specifics, but at the moment it's
 leaning towards creating a GPU particle system.
 
-### Setup
+**Setup**
 
 Since our group consists of both Windows and Linux users, we first wanted
 to create a project which is possible to build in both environments.
@@ -214,7 +214,7 @@ solution, but at least it gives us some form of memory management
 
 As of writing this, we will probably start working on the underlying architecture of the engine. We will also try to make the underlying structure of the engine general enough to be used for other stuff than just rendering particle systems. This is more of an intellectual challenge for us and a chance to test out ideas rather than an actual necessity. Gustav is currently reworking the architecture of another engine with the purpose of being used in 64k Intro, and hopefully, we can implement some of the ideas from this project into that. One reason why we might want a more general purpose engine is to be able to see how the particle system interacts with other 3D objects in a scene. And if we need a 3D-engine we might as well try and do a decent job. The code would also be more reusable if we want to include it in a future project.
 
-### GPU particle systems
+**GPU particle systems**
 
 There are multiple ways we could create a particle system and we have
 not really decided exactly what approach we will use at the
