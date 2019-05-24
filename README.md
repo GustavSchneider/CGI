@@ -7,6 +7,14 @@ main goals of the course. This blog will follow our progress in that
 project. The members of the project group are Joakim Lilja, Gustav Nelson Schneider and
 Timmy Nielsen.
 
+(stage 6) We are fininshed
+=======================
+At least we are finished with the particle system as far as this course goes. Since last time we have implemented a compute shader for controlling the emission of particles. In a short summary of how this is implemented is through an alive buffer and a dead buffer. When we want to emit a new particle we pick one from the pool of dead particles and put it in the pool of alive particles. When a particle dies it is moved to the dead buffer.
+
+Below you can see a video of the final particle system in action!
+
+PUT VIDEO HERE 
+
 (stage 5) Perceptual Study
 =======================
 Earlier this year, we attended an eye-tracking perceptual study for a computer science bachelor thesis here at KTH. The study proved to give valuable insights for the thesis writers and we take inspiration from this study when formulating a perceptual study fit for our project below.
