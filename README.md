@@ -23,15 +23,15 @@ We got inspiration from the study and how eyes act when looking at the objects, 
 
 **Study**
 
-Making visualisations satisfying to the human eye has proven to be a very important aspect of graphical representation when dealing with real life objects or particle systems. A big part of the industry use these visualisation to present objects and systems in entertainment such as movies or games with the sole purpose of making the customers feel comfortable and give them a reason to come back and revisit the graphical world presented to them.
+Making visualizations satisfying to the human eye has proven to be a very important aspect of graphical representation when dealing with real-life objects or particle systems. A big part of the industry uses these visualizations to present objects and systems in entertainment such as movies or games with the sole purpose of making the customers feel comfortable and give them a reason to come back and revisit the graphical world presented to them.
 
 This begs the question - what is it that makes a person enjoy a particle system? What effects are preferred and what parameter settings increases the chance that a person would stay longer to play around with the system and enjoy the visual experience?
 
-To evaluate this, we aim to create a perceptual study where the results are applicable to our project in the hopes of increasing the quality and useability of the implemented particle system. Our study should give an insight in how people perceive different particle system effects with the end goal being to validate how to create a particle system that can be successfully used in the entertainment industry.
+To evaluate this, we aim to create a perceptual study where the results are applicable to our project in the hopes of increasing the quality and usability of the implemented particle system. Our study should give an insight into how people perceive different particle system effects with the end goal being to validate how to create a particle system that can be successfully used in the entertainment industry.
 
 **Design**
 
-The design will consist of several predetermined animation effects that was captured in the particle system. These different animations will differ in the form of different parameter settings such as difference in noise, color, speed, blur, light, etc.
+The design will consist of several predetermined animation effects that were captured in the particle system. These different animations will differ in the form of different parameter settings such as a difference in noise, color, speed, blur, light, etc.
 
 The next stage in the design will be a freely usable particle system where the participants can change all the parameters and move around freely.
 
@@ -45,7 +45,7 @@ The target group would ideally be anyone that is interested in graphics, games o
 
 **Procedure**
 
-We will gather several participants and each user will individually be shown different effects of our particle system that are predetermined by us. All participants will be shown the same predetermined effects but in different order. After a participant has seen an effect, they give a rating of 1-5 on how much they enjoyed the effect.
+We will gather several participants and each user will individually be shown different effects of our particle system that are predetermined by us. All participants will be shown the same predetermined effects but in a different order. After a participant has seen an effect, they give a rating of 1-5 on how much they enjoyed the effect.
 
 At the second stage of the experiment, all the participants will get to interact with the particle system and with the possibility to change parameters and see how the particles change based on their interaction. We will instruct the participants to speak loudly their thoughts as they use the particle system to let us record the initial thoughts of everything. After they are done we will ask some questions of how the user experienced the particle system based on the following questions:
 
