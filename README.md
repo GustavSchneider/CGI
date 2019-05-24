@@ -14,6 +14,7 @@ Earlier this year, we attended an eye-tracking perceptual study for a computer s
 We got inspiration from the study and how eyes act when looking at the objects, and we wanted to do our own perceptual study but based on how the participants think and experience when looking at a particle system instead.
 
 **Study**
+
 Making visualisations satisfying to the human eye has proven to be a very important aspect of graphical representation when dealing with real life objects or particle systems. A big part of the industry use these visualisation to present objects and systems in entertainment such as movies or games with the sole purpose of making the customers feel comfortable and give them a reason to come back and revisit the graphical world presented to them.
 
 This begs the question - what is it that makes a person enjoy a particle system? What effects are preferred and what parameter settings increases the chance that a person would stay longer to play around with the system and enjoy the visual experience?
@@ -21,27 +22,35 @@ This begs the question - what is it that makes a person enjoy a particle system?
 To evaluate this, we aim to create a perceptual study where the results are applicable to our project in the hopes of increasing the quality and useability of the implemented particle system. Our study should give an insight in how people perceive different particle system effects with the end goal being to validate how to create a particle system that can be successfully used in the entertainment industry.
 
 **Design**
+
 The design will consist of several predetermined animation effects that was captured in the particle system. These different animations will differ in the form of different parameter settings such as difference in noise, color, speed, blur, light, etc.
 
 The next stage in the design will be a freely usable particle system where the participants can change all the parameters and move around freely.
 
 **Hypothesis**
+
 Different effects and parameter settings give a noticeable difference in the feeling of joy and amazement when experiencing the particle system on a computer screen. The difference can be somewhat measured to give a clear indication of what settings are more prone to success when aiming to distribute a particle system implementation to the entertainment industry.
 
 **Target group**
+
 The target group would ideally be anyone that is interested in graphics, games or movies. This is because our particle system would in an ideal future be implemented in a game or a movie and therefore we would like the actual end users feedback of the effects in our particle system.
 
 **Procedure**
+
 We will gather several participants and each user will individually be shown different effects of our particle system that are predetermined by us. All participants will be shown the same predetermined effects but in different order. After a participant has seen an effect, they give a rating of 1-5 on how much they enjoyed the effect.
 
 At the second stage of the experiment, all the participants will get to interact with the particle system and with the possibility to change parameters and see how the particles change based on their interaction. We will instruct the participants to speak loudly their thoughts as they use the particle system to let us record the initial thoughts of everything. After they are done we will ask some questions of how the user experienced the particle system based on the following questions:
 
 **Question 1:** What is your overall perception of the particle system?
+
 **Question 2:** Was there anything that seemed strange and off?
+
 **Question 3:** What was your favourite parameter settings of the particle system?
+
 **Question 4:** What would like to see in the future in this particle system?
 
 **Metrics**
+
 With the help of the recorded thoughts and the answers from the questions asked we will be able to investigate how good or bad the current state of the particle system is and what we should focus on in the future.
 
 (stage 4) More Features
