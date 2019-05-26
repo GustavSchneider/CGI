@@ -9,15 +9,12 @@ Timmy Nielsen.
 
 (Final Stage) Demo
 ==================
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/tBOh0sItLdI&feature=youtu.be&fbclid=IwAR0tvC20GUw8SR7j2VOfiDllyCk4lcAfdG2YSAJGne0id5O2WLJxq48u4v4/0.jpg)](http://www.youtube.com/watch?v=tBOh0sItLdI&feature=youtu.be&fbclid=IwAR0tvC20GUw8SR7j2VOfiDllyCk4lcAfdG2YSAJGne0id5O2WLJxq48u4v4)
-
-(stage 6) We are fininshed
-=======================
 At least we are finished with the particle system as far as this course goes. Since last time we have implemented a compute shader for controlling the emission of particles. In a short summary of how this is implemented is through an alive buffer and a dead buffer. When we want to emit a new particle we pick one from the pool of dead particles and put it in the pool of alive particles. When a particle dies it is moved to the dead buffer.
 
 Below you can see a video of the final particle system in action!
 
-PUT VIDEO HERE 
+
+[![Particle System Demo](http://img.youtube.com/vi/tBOh0sItLdI&feature=youtu.be&fbclid=IwAR0tvC20GUw8SR7j2VOfiDllyCk4lcAfdG2YSAJGne0id5O2WLJxq48u4v4/0.jpg)(http://www.youtube.com/watch?v=tBOh0sItLdI&feature=youtu.be&fbclid=IwAR0tvC20GUw8SR7j2VOfiDllyCk4lcAfdG2YSAJGne0id5O2WLJxq48u4v4)
 
 (stage 5) Perceptual Study
 =======================
