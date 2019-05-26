@@ -11,7 +11,7 @@ Timmy Nielsen.
 ==================
 At least we are finished with the particle system as far as this course goes. Since last time we have implemented a compute shader for controlling the emission of particles. In a short summary of how this is implemented is through an alive buffer and a dead buffer. When we want to emit a new particle we pick one from the pool of dead particles and put it in the pool of alive particles. When a particle dies it is moved to the dead buffer. We have also added some user interaction options such as choosing colors of paticles, max TTL, and a few animations.
 
-Below you can see a video of the final particle system in action!
+Below you can see a video of the final particle system in action! (Youtubes compression algorithm unfortunatly don't work well with particles. For better quality we recomend running the binary.)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tBOh0sItLdI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
